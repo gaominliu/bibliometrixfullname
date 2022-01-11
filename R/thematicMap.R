@@ -189,8 +189,8 @@ thematicMap <- function(M, field="ID", n=250, minfreq=5, ngrams=1, stemming=FALS
     hjustvar = c(0,0,1,1) ,
     vjustvar = c(0,1.0,0,1))
   
-  data("logo",envir=environment())
-  logo <- grid::rasterGrob(logo,interpolate = TRUE)
+  #data("logo",envir=environment())
+  #logo <- grid::rasterGrob(logo,interpolate = TRUE)
   
   x <- c(max(df$rcentrality)-0.02-diff(range(df$rcentrality))*0.125, max(df$rcentrality)-0.02)+0.5
   y <- c(min(df$rdensity),min(df$rdensity)+diff(range(df$rdensity))*0.125)
