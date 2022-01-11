@@ -52,8 +52,8 @@ authorProdOverTime <- function(M,k=10, graph=TRUE){
   x <- c(0.5,1.5*k/10)
   y <- c(min(df$year),min(df$year)+diff(range(df2$year))*0.125)
 
-  data("logo",envir=environment())
-  logo <- grid::rasterGrob(logo,interpolate = TRUE)
+  #data("logo",envir=environment())
+  #logo <- grid::rasterGrob(logo,interpolate = TRUE)
   
   g <- ggplot(df2, aes(x=.data$Author, y=.data$year, text = paste("Author: ", .data$Author,"\nYear: ",.data$year ,"\nN. of Articles: ",.data$freq ,"\nTotal Citations per Year: ", round(.data$TCpY,2))))+
     geom_point(aes(alpha=.data$TCpY,size = .data$freq), color="dodgerblue4")+ 
