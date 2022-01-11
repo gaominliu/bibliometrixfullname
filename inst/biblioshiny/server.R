@@ -898,8 +898,8 @@ server <- function(input, output, session) {
             ,axis.title = element_text(size = 14, color = '#555555')
             ,axis.title.y = element_text(vjust = 1, angle = 0)
             ,axis.title.x = element_text(hjust = 0)
-      ) +
-      annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
+      ) #+
+      #annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
     values$ASPplot <- g
     
     plot.ly(g,flip=FALSE, side="r", aspectratio=1.7, size=0.10)
@@ -990,8 +990,8 @@ server <- function(input, output, session) {
             ,axis.title = element_text(size = 14, color = '#555555')
             ,axis.title.y = element_text(vjust = 1, angle = 0)
             ,axis.title.x = element_text(hjust = 0)
-      ) + 
-      annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
+      ) #+ 
+      #annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
     values$ACpYplot <- g
     plot.ly(g,flip=FALSE, side="r", aspectratio=1.7, size=0.10)
   })
@@ -1330,7 +1330,7 @@ server <- function(input, output, session) {
             ,axis.title.y = element_text(vjust = 1, angle = 90)
             ,axis.title.x = element_text(hjust = 0.95, angle = 0)
             ,axis.text.x = element_text(size=10, angle = 90)
-      ) + annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
+      ) #+ annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
     
     values$SDplot <- g
     return(g)
@@ -1727,7 +1727,7 @@ server <- function(input, output, session) {
             ,axis.title = element_text(size = 14, color = '#555555')
             ,axis.title.y = element_text(vjust = 1, angle = 90)
             ,axis.title.x = element_text(hjust = 0)
-      ) + annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
+      ) #+ annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
     values$LLplot <- g
     plot.ly(g,flip=FALSE, side="r", aspectratio=1.4, size=0.10)
     
@@ -1880,8 +1880,8 @@ server <- function(input, output, session) {
                          theme_minimal() +
                          theme(plot.caption = element_text(size = 9, hjust = 0.5,
                                                            color = "blue", face = "italic"))+
-                         coord_flip()) + 
-      annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
+                         coord_flip()) #+ 
+      #annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
     
     values$MRCOplot <- g
     return(g)
@@ -2623,7 +2623,7 @@ server <- function(input, output, session) {
             ,axis.title.y = element_text(vjust = 1, angle = 90)
             ,axis.title.x = element_text(hjust = 0.95, angle = 0)
             ,axis.text.x = element_text(size=10, angle = 90)
-      ) + annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
+      ) #+ annotation_custom(values$logoGrid, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
     
     values$WDplot <- g
     return(g)
@@ -4106,8 +4106,8 @@ server <- function(input, output, session) {
       labs(x = textLabx)+
       expand_limits(y= c(1, length(xx[,y]) + 1))+
       theme_minimal()+
-      theme(axis.text.y  = element_text(angle=0, hjust=0)) + 
-      annotation_custom(values$logoGrid, xmin = xl[1], xmax = xl[2], ymin = yl[1], ymax = yl[2]) 
+      theme(axis.text.y  = element_text(angle=0, hjust=0)) #+ 
+      #annotation_custom(values$logoGrid, xmin = xl[1], xmax = xl[2], ymin = yl[1], ymax = yl[2]) 
     
     return(g)
   }
@@ -4357,7 +4357,7 @@ server <- function(input, output, session) {
             ,legend.position = c(.18,.36)
             ,legend.background = element_blank()
             ,legend.key = element_blank()
-      ) + annotation_custom(values$logoGrid, xmin = 143, xmax = 189.5, ymin = -69, ymax = -48) 
+      ) #+ annotation_custom(values$logoGrid, xmin = 143, xmax = 189.5, ymin = -69, ymax = -48) 
     
    results=list(g=g,tab=tab)
     return(results)
@@ -4639,7 +4639,7 @@ server <- function(input, output, session) {
             ,legend.position = c(.18,.36)
             ,legend.background = element_blank()
             ,legend.key = element_blank()
-      ) + annotation_custom(values$logoGrid, xmin = 143, xmax = 189.5, ymin = -69, ymax = -48) 
+      ) #+ annotation_custom(values$logoGrid, xmin = 143, xmax = 189.5, ymin = -69, ymax = -48) 
     if (isTRUE(label)){
       CO=dplyr::inner_join(CO,countries, by=c('Tab'='Tab'))
       g=g+
