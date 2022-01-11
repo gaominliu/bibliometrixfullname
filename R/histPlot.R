@@ -152,8 +152,8 @@ histPlot<-function(histResults, n=20, size = 5, labelsize = 5, title_as_label = 
     labs(title = "Historical Direct Citation Network") 
   
   ### logo coordinates
-  data("logo",envir=environment())
-  logo <- grid::rasterGrob(logo,interpolate = TRUE)
+  #data("logo",envir=environment())
+  #logo <- grid::rasterGrob(logo,interpolate = TRUE)
   
   a <- ggplot_build(g)$data
   
