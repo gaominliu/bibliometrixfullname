@@ -197,8 +197,8 @@ conceptualStructure<-function(M,field="ID", ngrams=1, method="MCA", quali.supp=N
   
   km.res$centers=centers[,c(2,3,1)]
   
-  data("logo",envir=environment())
-  logo <- grid::rasterGrob(logo,interpolate = TRUE)
+  #data("logo",envir=environment())
+  #logo <- grid::rasterGrob(logo,interpolate = TRUE)
   
   b=fviz_cluster(km.res, stand=FALSE, data = df,labelsize=labelsize, repel = TRUE)+
     theme_minimal()+
@@ -244,7 +244,7 @@ conceptualStructure<-function(M,field="ID", ngrams=1, method="MCA", quali.supp=N
   b=b + theme(legend.position="none")
   
   ## logo coordinates
-  coord_b <- plotCoord(b)
+  #coord_b <- plotCoord(b)
 
   b <- b #+ annotation_custom(logo, xmin = coord_b[1], xmax = coord_b[2], ymin = coord_b[3], ymax = coord_b[4]) 
   ##
@@ -265,7 +265,7 @@ conceptualStructure<-function(M,field="ID", ngrams=1, method="MCA", quali.supp=N
           panel.grid.minor = element_blank())
   
   ## logo coordinates
-  coord <- plotCoord(b_dend, side="u")
+  #coord <- plotCoord(b_dend, side="u")
   
   b_dend <- b_dend #+ annotation_custom(logo, xmin = coord[1], xmax = coord[2], ymin = coord[3], ymax = coord[4]) 
   ##
