@@ -246,7 +246,7 @@ conceptualStructure<-function(M,field="ID", ngrams=1, method="MCA", quali.supp=N
   ## logo coordinates
   coord_b <- plotCoord(b)
 
-  b <- b + annotation_custom(logo, xmin = coord_b[1], xmax = coord_b[2], ymin = coord_b[3], ymax = coord_b[4]) 
+  b <- b #+ annotation_custom(logo, xmin = coord_b[1], xmax = coord_b[2], ymin = coord_b[3], ymax = coord_b[4]) 
   ##
   
   if (isTRUE(graph)){plot(b)}
@@ -267,7 +267,7 @@ conceptualStructure<-function(M,field="ID", ngrams=1, method="MCA", quali.supp=N
   ## logo coordinates
   coord <- plotCoord(b_dend, side="u")
   
-  b_dend <- b_dend + annotation_custom(logo, xmin = coord[1], xmax = coord[2], ymin = coord[3], ymax = coord[4]) 
+  b_dend <- b_dend #+ annotation_custom(logo, xmin = coord[1], xmax = coord[2], ymin = coord[3], ymax = coord[4]) 
   ##
   
   if (isTRUE(graph)){plot(b_dend)}
@@ -337,7 +337,7 @@ conceptualStructure<-function(M,field="ID", ngrams=1, method="MCA", quali.supp=N
     ## logo coordinates
     xl <- c(rangex[2]-0.02-diff(rangex)*0.125, rangex[2]-0.02)
     yl <- c(rangey[1],rangey[1]+diff(rangey)*0.125)+0.02
-    b_doc <- b_doc + annotation_custom(logo, xmin = xl[1], xmax = xl[2], ymin = yl[1], ymax = yl[2]) 
+    b_doc <- b_doc #+ annotation_custom(logo, xmin = xl[1], xmax = xl[2], ymin = yl[1], ymax = yl[2]) 
     ##
     
     if (isTRUE(graph)){(plot(b_doc))}
@@ -388,7 +388,7 @@ conceptualStructure<-function(M,field="ID", ngrams=1, method="MCA", quali.supp=N
     ## logo coordinates
     xl <- c(rangex[2]-0.02-diff(rangex)*0.125, rangex[2]-0.02)
     yl <- c(rangey[1],rangey[1]+diff(rangey)*0.125)+0.02
-    b_doc_TC <- b_doc_TC + annotation_custom(logo, xmin = xl[1], xmax = xl[2], ymin = yl[1], ymax = yl[2]) 
+    b_doc_TC <- b_doc_TC #+ annotation_custom(logo, xmin = xl[1], xmax = xl[2], ymin = yl[1], ymax = yl[2]) 
     ##
 
     if (isTRUE(graph)){plot(b_doc_TC)}
