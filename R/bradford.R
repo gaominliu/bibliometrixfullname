@@ -44,8 +44,8 @@ df=data.frame(SO=names(cumSO),Rank=1:length(cumSO),Freq=as.numeric(SO),cumFreq=c
 
 x <- c(max(log(df$Rank))-0.02-diff(range(log(df$Rank)))*0.125, max(log(df$Rank))-0.02)
 y <- c(min(df$Freq),min(df$Freq)+diff(range(df$Freq))*0.125)+1
-data("logo",envir=environment())
-logo <- grid::rasterGrob(logo,interpolate = TRUE)
+#data("logo",envir=environment())
+#logo <- grid::rasterGrob(logo,interpolate = TRUE)
 
 g=ggplot2::ggplot(df, aes(x = log(.data$Rank), y = .data$Freq, text=paste("Source: ",.data$SO,"\nN. of Documents: ",.data$Freq))) +
   geom_line(aes(group="NA")) +
