@@ -107,8 +107,8 @@ if (length(timespan)==2){
 df=data.frame(X=X,Y=Y,diffMedian=diffMedian,stringsAsFactors = FALSE)
 RPYS=data.frame(Year=names(Y),Citations=Y,diffMedian5=diffMedian)
 
-data("logo",envir=environment())
-logo <- grid::rasterGrob(logo,interpolate = TRUE)
+#data("logo",envir=environment())
+#logo <- grid::rasterGrob(logo,interpolate = TRUE)
 
 x <- c(min(df$X),min(df$X)+diff(range(df$X))*0.125)+1
 y <- c(min(c(df$Y,df$diffMedian)),min(c(df$Y,df$diffMedian))+diff(range(c(df$Y,df$diffMedian)))*0.125)*1.05
