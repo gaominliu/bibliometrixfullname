@@ -68,8 +68,8 @@ fieldByYear <- function(M,
     dplyr::filter(between(.data$year_med, timespan[1],timespan[2])) %>%
     mutate(item = fct_reorder(.data$item, .data$freq))
   
-  data("logo",envir=environment())
-  logo <- grid::rasterGrob(logo,interpolate = TRUE)
+  #data("logo",envir=environment())
+  #logo <- grid::rasterGrob(logo,interpolate = TRUE)
   
   yrange <- range(unlist(df[,which(regexpr("year",names(df))>-1)]))
   
