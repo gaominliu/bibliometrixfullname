@@ -1365,14 +1365,14 @@ server <- function(input, output, session) {
     
     plot.ly(g, flip=FALSE, side="r", aspectratio=1.8, size=0.10) %>%
       layout(legend = leg) %>%
-      config(displaylogo = FALSE,
-             modeBarButtonsToRemove = c(
-               'sendDataToCloud',
-               'pan2d', 
-               'select2d', 
-               'lasso2d',
-               'toggleSpikelines'
-             )) %>%
+      #config(displaylogo = FALSE,
+      #       modeBarButtonsToRemove = c(
+      #         'sendDataToCloud',
+      #         'pan2d', 
+      #         'select2d', 
+      #         'lasso2d',
+      #         'toggleSpikelines'
+      #       )) %>%
       layout(hovermode = 'compare')
     #suppressWarnings(plot(g))
     
@@ -2657,14 +2657,14 @@ server <- function(input, output, session) {
     
     plot.ly(g, flip=FALSE, side="r", aspectratio=1.6, size=0.10) %>%
       layout(legend = leg) %>%
-      config(displaylogo = FALSE,
-             modeBarButtonsToRemove = c(
-               'sendDataToCloud',
-               'pan2d', 
-               'select2d', 
-               'lasso2d',
-               'toggleSpikelines'
-             )) %>%
+      #config(displaylogo = FALSE,
+      #       modeBarButtonsToRemove = c(
+      #         'sendDataToCloud',
+      #         'pan2d', 
+      #         'select2d', 
+      #         'lasso2d',
+      #         'toggleSpikelines'
+      #       )) %>%
       layout(hovermode = 'compare')
     
   #}, width = "auto", height = reactive(ifelse(!is.null(input$innerWidth),input$innerWidth*2/5,0)), res = 150) #height = 600, width = 900)
@@ -4064,27 +4064,28 @@ server <- function(input, output, session) {
       x <- max(xrange)-0.2-sizex
     }
     
-    ggplotly(g, tooltip = "text") %>% 
-      config(displaylogo = FALSE,
-             modeBarButtonsToRemove = c(
-               'sendDataToCloud',
-               'pan2d', 
-               'select2d', 
-               'lasso2d',
-               'toggleSpikelines',
-               'hoverClosestCartesian',
-               'hoverCompareCartesian'
-             )) %>%
-      layout(
-        images = list(
-          source = raster2uri(as.raster(values$logo)),
-          x = x, y = y+height,
-          sizex = sizex, sizey = sizey,
-          xref = "x", yref = "y",
-          xanchor = "left", yanchor = "bottom",
-          sizing = "stretch"
-        )
-      )
+    ggplotly(g, tooltip = "text")
+   #%>% 
+      #config(displaylogo = FALSE,
+      #       modeBarButtonsToRemove = c(
+      #         'sendDataToCloud',
+      #         'pan2d', 
+      #         'select2d', 
+      #         'lasso2d',
+      #         'toggleSpikelines',
+      #         'hoverClosestCartesian',
+      #         'hoverCompareCartesian'
+      #       )) %>%
+      #layout(
+      #  images = list(
+      #    source = raster2uri(as.raster(values$logo)),
+      #    x = x, y = y+height,
+      #    sizex = sizex, sizey = sizey,
+      #    xref = "x", yref = "y",
+      #    xanchor = "left", yanchor = "bottom",
+      #    sizing = "stretch"
+      #  )
+      #)
   }
   
   freqPlot <- function(xx,x,y, textLaby,textLabx, title){
