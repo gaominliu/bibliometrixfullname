@@ -130,11 +130,15 @@ postprocessing <-function(DATA,dbsource){
   
   AU <- lapply(listAU,function(l){
     
+    temp = gsub("\r?\n|\r","; ",l)
+    a = strsplit(as.character(temp),split="; ")
+    a = as.vector(a[[1]])
+    a = toupper(a)
     lastname <- trim(gsub(",.*","",l))
     firstname <- strsplit(trim(gsub(".*,","",l))," ")
     firstname <- gsub("[^:A-Z:]","",firstname)
     AU <- paste(lastname,unlist(firstname),sep=" ",collapse=";")
-    return(AU)
+    return(a)
   })
   
   
