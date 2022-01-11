@@ -154,8 +154,8 @@ couplingMap <- function(M, analysis = "documents", field="CR", n=500, label.term
     df$label <- w
   }
   
-  data("logo",envir=environment())
-  logo <- grid::rasterGrob(logo,interpolate = TRUE)
+  #data("logo",envir=environment())
+  #logo <- grid::rasterGrob(logo,interpolate = TRUE)
   x <- c(max(df$rcentrality)-0.02-diff(range(df$rcentrality))*0.125, max(df$rcentrality)-0.02)+0.5
   y <- c(min(df$rimpact),min(df$rimpact)+diff(range(df$rimpact))*0.125)
   
