@@ -134,7 +134,7 @@ g=ggplot(df, aes(x=.data$X,y=.data$Y,text=paste("Year: ",.data$X,"\nN. of Refere
         ,axis.title.y = element_text(vjust = 1, angle = 90)
         ,axis.title.x = element_text(hjust = 0.95, angle = 0)
         ,axis.text.x = element_text(size=8,angle = 90)
-  ) + annotation_custom(logo, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
+  ) #+ annotation_custom(logo, xmin = x[1], xmax = x[2], ymin = y[1], ymax = y[2]) 
 
 if (isTRUE(graph)){plot(g)}
     CR$Reference <- reduceRefs(CR$Reference)
